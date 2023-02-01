@@ -3,6 +3,9 @@ import { colors, snippets } from "../styles";
 
 
 const Styles = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 3rem;
   ${'' /* Background */}
   .background {
    ${snippets.absoluteFill}
@@ -22,12 +25,12 @@ const Styles = styled.div`
     }
   }
 
-  ${'' /* Content */}
+  ${'' /* Company */}
   ${snippets.absoluteFill}
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  padding: 7rem 3rem;
+  
   #company {
     margin-left: auto;
     text-align: right;
@@ -53,8 +56,9 @@ const Styles = styled.div`
     }
   }
 
+  ${'' /* Projection */}
   #projection {
-    margin-top: 10rem;
+    margin-top: 5rem;
     .heading {
       margin-bottom: 3rem;
     }
@@ -71,9 +75,10 @@ const Styles = styled.div`
           padding-bottom: 2px;
           background-color: ${colors.primary};
           width: fit-content;
+          font-size: 1.5rem;
         }
         .value {
-          font-size: 4rem;
+          font-size: 3rem;
         }
         &.high {
           .type {
@@ -81,7 +86,7 @@ const Styles = styled.div`
             color: #1f1f1f;
           }
           .value {
-            font-size: 5.7rem;
+            font-size: 4.5rem;
           }
         }
         &.mean {
@@ -89,7 +94,7 @@ const Styles = styled.div`
             font-size: 1rem;
           }
           .value {
-            font-size: 4rem;
+            font-size: 3rem;
           }
         }
         &.low {
@@ -97,12 +102,12 @@ const Styles = styled.div`
             background-color: #e34502;
           }
           .value {
-            font-size: 5.3rem;
+            font-size: 4rem;
           }
         }
         &.current {
-          margin-top: 7rem;
-          margin-right: 2rem;
+          margin-top: 5.5rem;
+          margin-right: 1rem;
         }
       }
       ul {
@@ -111,8 +116,58 @@ const Styles = styled.div`
         gap: 2rem;
       }
       .chart {
-        height: 20rem;
+        height: 15rem;
       }
+    }
+  }
+
+  ${'' /* IBES Recommendation */}
+  #ibes {
+    margin: 2rem 0;
+    h4 {
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      background-color: ${colors.primary};
+      width: fit-content;
+      font-size: 8rem;
+      padding: 30px;
+    }
+  }
+
+  ${'' /* Slider */}
+  #slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    gap: 2rem;
+    position: relative;
+    .option {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0.5;
+      .label {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .bar {
+        margin-top: 1rem;
+        height: 2rem;
+        width: 100%;
+      }
+    }
+    .pointer {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      height: 4rem;
+      width: 5rem;
+      top: 90%;
+      background-color #d9d9d9;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
   }
 `;

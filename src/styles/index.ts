@@ -68,4 +68,11 @@ export const snippets = {
     left: 0;
     right: 0;
   `,
+  // Display Flex Centering
+  flexCenter: `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `,
 }

@@ -2,9 +2,9 @@ import {
 	AbsoluteFill, Composition, useCurrentFrame, interpolate, useVideoConfig,
 	spring,
 } from "remotion";
-import MyComposition from "./Composition";
+// import MyComposition from "./Composition";
 import GlobalStyles from "./styles/GlobalStyles";
-import { HelloWorld } from "./HelloWorld";
+// import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import Recommendation from "./Recommendation";
 import "./styles/fonts.css";
@@ -19,7 +19,7 @@ export const RemotionRoot: React.FC = () => {
 				id="Recommendation"
 				component={Recommendation}
 				fps={30}
-				durationInFrames={300}
+				durationInFrames={90}
 				width={1080}
 				height={1920}
 			/>

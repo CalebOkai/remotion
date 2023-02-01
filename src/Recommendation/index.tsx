@@ -1,9 +1,10 @@
-import { Img } from "remotion";
+import { Img, Sequence, useCurrentFrame, interpolate } from "remotion";
 import Styles from "./styles";
 import logo from "../assets/svg/intel-white.svg";
 import chart from "../assets/svg/chart.svg";
 import { colors } from "../styles";
 import { randomNumber } from "../utils/numbers";
+import { Slider } from "../components";
 
 
 const lineColors = [
@@ -12,9 +13,13 @@ const lineColors = [
   colors.white
 ]
 
+
 const Recommendation = () => {
+
+
   return (
     <Styles>
+      {/* Background */}
       <div className="background">
         {[...Array(6)].map((e: undefined, i: number) =>
           <div
@@ -27,6 +32,8 @@ const Recommendation = () => {
           />
         )}
       </div>
+
+      {/* Company */}
       <div id="company">
         <div className="identity">
           <div className="name">
@@ -47,6 +54,7 @@ const Recommendation = () => {
         </div>
       </div>
 
+      {/* Projection Targets */}
       <div id="projection">
         <div className="heading">
           <h2>52 WEEK</h2>
@@ -74,8 +82,18 @@ const Recommendation = () => {
           </ul>
         </div>
       </div>
+
+      <div id="ibes">
+        {/* IBES  Recommendation */}
+        <h4>IBES RECOMMENDATION</h4>
+        <h1>HOLD</h1>
+      </div>
+
+      {/* Slider */}
+      <Slider />
+
     </Styles>
   )
 }
 
-export default Recommendation
+export default Recommendation;
