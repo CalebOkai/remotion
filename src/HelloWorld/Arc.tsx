@@ -1,6 +1,6 @@
-import {useState} from 'react';
-import {random, useVideoConfig} from 'remotion';
-import {COLOR_1, COLOR_2} from './constants';
+import { useState } from "react";
+import { random, useVideoConfig } from "remotion";
+import { COLOR_1, COLOR_2 } from "./constants";
 
 const getCircumferenceOfArc = (rx: number, ry: number) => {
 	return Math.PI * 2 * Math.sqrt((rx * rx + ry * ry) / 2);
@@ -17,8 +17,8 @@ export const Arc: React.FC<{
 	progress: number;
 	rotation: number;
 	rotateProgress: number;
-}> = ({progress, rotation, rotateProgress}) => {
-	const {width, height} = useVideoConfig();
+}> = ({ progress, rotation, rotateProgress }) => {
+	const { width, height } = useVideoConfig();
 
 	// Each svg Id must be unique to not conflict with each other
 	const [gradientId] = useState(() => String(random(null)));
@@ -27,7 +27,7 @@ export const Arc: React.FC<{
 		<svg
 			viewBox={`0 0 ${width} ${height}`}
 			style={{
-				position: 'absolute',
+				position: "absolute",
 				transform: `rotate(${rotation * rotateProgress}deg)`,
 			}}
 		>

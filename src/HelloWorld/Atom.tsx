@@ -1,10 +1,10 @@
-import {useState} from 'react';
-import {random, useVideoConfig} from 'remotion';
-import {COLOR_1, COLOR_2} from './constants';
+import { useState } from "react";
+import { random, useVideoConfig } from "remotion";
+import { COLOR_1, COLOR_2 } from "./constants";
 
 export const Atom: React.FC<{
 	scale: number;
-}> = ({scale}) => {
+}> = ({ scale }) => {
 	const config = useVideoConfig();
 
 	// Each SVG ID must be unique to not conflict with each other
@@ -14,7 +14,7 @@ export const Atom: React.FC<{
 		<svg
 			viewBox={`0 0 ${config.width} ${config.height}`}
 			style={{
-				position: 'absolute',
+				position: "absolute",
 				transform: `scale(${scale})`,
 			}}
 		>
